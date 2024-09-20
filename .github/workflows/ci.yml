@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: php-actions/composer@v6
-      - uses: php-actions/phpunit@v3
+      - uses: php-actions/phpunit@v4
         with:
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
@@ -32,4 +32,3 @@ jobs:
           args: --coverage-clover clover.xml
         env:
           XDEBUG_MODE: coverage
-          TEST_NAME: Scarlett

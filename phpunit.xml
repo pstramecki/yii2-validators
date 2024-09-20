@@ -3,7 +3,7 @@
     <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
             <!-- suffix=".php" -->
-            <directory>src</directory>
+            <directory suffix=".php">src</directory>
         </include>
     </source>
     <coverage>
@@ -16,7 +16,7 @@
         <testsuite name="Yii2 Validators Test Suite">
             <!-- suffix="Test.php" -->
 
-            <directory>./tests</directory>
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
 
