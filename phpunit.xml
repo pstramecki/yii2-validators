@@ -3,7 +3,7 @@
     <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
             <!-- suffix=".php" -->
-            <directory suffix=".php">src</directory>
+            <directory>src</directory>
         </include>
     </source>
     <coverage>
