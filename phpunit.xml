@@ -15,6 +15,7 @@
     <testsuites>
         <testsuite name="Yii2 Validators Test Suite">
             <!-- suffix="Test.php" -->
+
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
