@@ -30,7 +30,12 @@
   },
   "autoload": {
     "psr-4": {
-      "pstramecki\\validators\\": "src",
+      "pstramecki\\validators\\": "src"
+
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "pstramecki\\validators\\tests\\": "tests"
     }
   },

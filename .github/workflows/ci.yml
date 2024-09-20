@@ -13,4 +13,20 @@ jobs:
       - name: PHPStan Static Analysis
         uses: php-actions/phpstan@v3
         with:
-          path: src/
+          path: src/ tests/
+
+  phpunit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: php-actions/composer@v6
+      - uses: php-actions/phpunit@v3
+        with:
+          php_extensions: xdebug
+          bootstrap: vendor/autoload.php
+          configuration: test/phpunit.xml
+          args: --coverage-text
+        env:
+          XDEBUG_MODE: coverage
+          TEST_NAME: Scarlett
