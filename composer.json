@@ -30,8 +30,8 @@
   },
   "autoload": {
     "psr-4": {
-      "pstramecki\\yii2-validators\\": "src",
-      "pstramecki\\yii2-validators\\tests\\": "tests"
+      "pstramecki\\validators\\": "src",
+      "pstramecki\\validators\\tests\\": "tests"
     }
   },
   "config": {
