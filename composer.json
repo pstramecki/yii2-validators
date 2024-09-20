@@ -1,0 +1,35 @@
+{
+  "name": "pstramecki/yii2-validators",
+  "description": "Yii2 validators",
+  "keywords": ["yii" ,"yii2", "validator"],
+  "type": "yii2-extension",
+  "license": "GPL-3.0-or-later",
+  "support": {
+    "issues": "https://github.com/pstramecki/yii2-validators/issues",
+    "source": "https://github.com/pstramecki/yii2-validators"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Paweł Stramecki",
+      "email": "p.stramecki@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.51"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~11.3.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "pstramecki\\yii2-validators": "src",
+      "pstramecki\\yii2-validators\\tests\\": "tests"
+    }
+  }
+}
