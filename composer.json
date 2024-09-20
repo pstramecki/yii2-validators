@@ -4,6 +4,7 @@
   "keywords": ["yii" ,"yii2", "validator"],
   "type": "yii2-extension",
   "license": "GPL-3.0-or-later",
+  "version": "1.0.0",
   "support": {
     "issues": "https://github.com/pstramecki/yii2-validators/issues",
     "source": "https://github.com/pstramecki/yii2-validators"
@@ -29,14 +30,13 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src",
       "pstramecki\\yii2-validators\\": "src",
       "pstramecki\\yii2-validators\\tests\\": "tests"
     }
   },
   "config": {
     "allow-plugins": {
-      "yiisoft/yii2-composer": false
+      "yiisoft/yii2-composer": true
     }
   }
 }
