@@ -31,5 +31,10 @@
       "pstramecki\\yii2-validators": "src",
       "pstramecki\\yii2-validators\\tests\\": "tests"
     }
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": false
+    }
   }
 }
