@@ -7,7 +7,21 @@ permissions:
 
 jobs:
   phpstan:
-    runs-on: ubuntu-latest
+
+    runs-on: "${{ matrix.operating-system }}"
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        operating-system:
+          - "ubuntu-20.04"
+          - "ubuntu-22.04"
+
+        php-version:
+          - "8.1"
+          - "8.2"
+          - "8.3"
 
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +33,20 @@ jobs:
           path: src/ tests/
 
   phpunit:
-    runs-on: ubuntu-latest
+    runs-on: "${{ matrix.operating-system }}"
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        operating-system:
+          - "ubuntu-20.04"
+          - "ubuntu-22.04"
+
+        php-version:
+          - "8.1"
+          - "8.2"
+          - "8.3"
 
     steps:
       - uses: actions/checkout@v4
