@@ -16,9 +16,8 @@ final class ArrayValidator extends Validator
         }
     }
 
-
-    protected function validateValue($value): ?array
+    protected function validateValue(mixed $value): ?array
     {
-        return is_array($value) ? null : [$this->message, []];
+        return is_array($value) ? null : [$this->message];
     }
 }

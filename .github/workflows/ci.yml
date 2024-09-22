@@ -31,6 +31,7 @@ jobs:
         uses: php-actions/phpstan@v3
         with:
           path: src/ tests/
+          args: --coverage-clover clover.xml
 
   phpunit:
     runs-on: "${{ matrix.operating-system }}"

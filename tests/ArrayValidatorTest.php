@@ -9,7 +9,7 @@ use ReflectionClass;
 
 final class ArrayValidatorTest extends TestCase
 {
-    public function testIsFinal()
+    public function testIsFinal(): void
     {
         $reflector = new ReflectionClass(ArrayValidator::class);
         $this->assertTrue($reflector->isFinal());
@@ -17,7 +17,7 @@ final class ArrayValidatorTest extends TestCase
 
 
     #[DataProvider('validValues')]
-    public function testValidateIsValid($value): void
+    public function testValidateIsValid(mixed $value): void
     {
 
         $validator = new ArrayValidator();
@@ -26,7 +26,7 @@ final class ArrayValidatorTest extends TestCase
     }
 
     #[DataProvider('invalidValues')]
-    public function testValidateIsInvalid($value): void
+    public function testValidateIsInvalid(mixed $value): void
     {
 
         $validator = new ArrayValidator();
