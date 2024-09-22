@@ -54,7 +54,6 @@ jobs:
       - uses: php-actions/phpunit@v4
         with:
           php_extensions: xdebug
-          bootstrap: vendor/autoload.php
           configuration: phpunit.xml
           args: --coverage-clover clover.xml
         env:
