@@ -1,0 +1,60 @@
+name: CI
+
+on: [push]
+
+permissions:
+  contents: write
+
+jobs:
+  phpstan:
+
+    runs-on: "${{ matrix.operating-system }}"
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        operating-system:
+          - "ubuntu-20.04"
+          - "ubuntu-22.04"
+
+        php-version:
+          - "8.1"
+          - "8.2"
+          - "8.3"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: php-actions/composer@v6
+
+      - name: PHPStan Static Analysis
+        uses: php-actions/phpstan@v3
+        with:
+          path: src/ tests/
+
+  phpunit:
+    runs-on: "${{ matrix.operating-system }}"
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        operating-system:
+          - "ubuntu-20.04"
+          - "ubuntu-22.04"
+
+        php-version:
+          - "8.1"
+          - "8.2"
+          - "8.3"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: php-actions/composer@v6
+      - uses: php-actions/phpunit@v4
+        with:
+          php_extensions: xdebug
+          configuration: phpunit.xml
+          args: --coverage-clover clover.xml
+        env:
+          XDEBUG_MODE: coverage

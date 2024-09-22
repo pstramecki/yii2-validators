@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit bootstrap="./tests/bootstrap.php" colors="true" stopOnFailure="false">
+    <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
+        <include>
+            <!-- suffix=".php" -->
+            <directory suffix=".php">src</directory>
+        </include>
+    </source>
+    <coverage>
+        <report>
+            <html outputDirectory="./.coverage" lowUpperBound="35" highLowerBound="70"/>
+            <text outputFile="php://stdout" showUncoveredFiles="true"/>
+        </report>
+    </coverage>
+    <testsuites>
+        <testsuite name="Yii2 Validators Test Suite">
+            <!-- suffix="Test.php" -->
+
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+
+
+    <logging/>
+</phpunit>
