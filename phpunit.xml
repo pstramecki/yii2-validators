@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<phpunit bootstrap="./tests/bootstrap.php" colors="false" stopOnFailure="false">
+<phpunit bootstrap="./tests/bootstrap.php" colors="true" stopOnFailure="false">
     <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
             <!-- suffix=".php" -->
@@ -8,7 +8,7 @@
     </source>
     <coverage>
         <report>
-            <html outputDirectory="./_coverage" lowUpperBound="35" highLowerBound="70"/>
+            <html outputDirectory="./.coverage" lowUpperBound="35" highLowerBound="70"/>
             <text outputFile="php://stdout" showUncoveredFiles="true"/>
         </report>
     </coverage>
